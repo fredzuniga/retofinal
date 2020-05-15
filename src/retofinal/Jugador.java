@@ -7,12 +7,4 @@ public class Jugador extends Personaje{
          // aleatoria ejecuta funciones
     }
     
-    public void aumentaPunto(){
-    
-    }
-    
-    public void disminuyePuntaje(){
-        puntosVida--;
-    }
-    
 }
