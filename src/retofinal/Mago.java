@@ -3,9 +3,9 @@ package retofinal;
 import java.util.Random;
 
 public class Mago extends Personaje{
-    private int totalAdasCapturadas;
-    private int adasCapturadasTurno;
-    private int adasAcumuladasTurno;
+    private int totalAdasCapturadas; // acumulador
+    private int adasCapturadasTurno; // 6
+    private int adasAcumuladasTurno; // 3 + 5 + 6
 
     public Mago() {
         totalAdasCapturadas = 0;
@@ -16,6 +16,9 @@ public class Mago extends Personaje{
     public int ejecutarTurno(){
         Random accion_aleatoria = new Random();
         return accion_aleatoria.nextInt(2)+1;
+        // 1 - 2
+        // 1 capturarHadas
+        // mandaOgro
     }
     
     public void mandaOgro(){
@@ -28,7 +31,8 @@ public class Mago extends Personaje{
         adasAcumuladasTurno += adasCapturadasTurno;
         totalAdasCapturadas += adasCapturadasTurno;
     }
-
+    
+    // getter y setters 
     public int getTotalAdasCapturadas() {
         return totalAdasCapturadas;
     }
